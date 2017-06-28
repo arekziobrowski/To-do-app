@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:paddingLeft="@dimen/dialog_left"
+    android:paddingRight="@dimen/dialog_left"
+    android:paddingTop="@dimen/dialog_left"
+    android:paddingBottom="@dimen/dialog_bottom">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            app:srcCompat="@drawable/ic_chevron_left_black_24dp"
+            android:background="@color/colorFABTint"
+            android:id="@+id/backbtn"
+            android:layout_weight="1"
+
+            android:paddingBottom="@dimen/dialog_between" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:id="@+id/input_header"
+            android:layout_weight="1"
+
+            android:text="@string/input_header"
+            android:textSize="@dimen/dialog_title_size"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:id="@+id/dialog_title_et"
+            android:maxLength="50"
+            android:maxLines="2"
+            android:layout_weight="1"
+            android:hint="@string/title_hint" />
+
+        <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:steps="1"
+            app:bar_color="@color/colorPrimary"
+            android:layout_gravity="center"
+            app:bar_highlight_color="@color/colorPrimaryDark"
+            android:layout_weight="1"
+
+            app:left_thumb_color="@color/colorAccent"
+            app:left_thumb_color_pressed="@color/colorAccent"
+            android:id="@+id/seekbar"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:id="@+id/seekbar_value"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:textSize="@dimen/dialog_seekbar_value"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:id="@+id/dialog_description_et"
+            android:maxLength="120"
+            android:layout_weight="1"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:hint="@string/description_hint" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:id="@+id/dialog_date_et"
+            android:layout_weight="1"
+            android:inputType="date"
+            android:focusable="false"
+            android:longClickable="false"
+            android:hint="@string/date_hint"/>
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/fab"
+        app:srcCompat="@drawable/ic_done_black_24dp"
+        app:fabSize="auto"
+        android:tint="@color/colorFABTint"/>
+
+</android.support.design.widget.CoordinatorLayout>

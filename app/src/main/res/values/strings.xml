@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">To Do</string>
+    <string name="row_image">Priority Image</string>
+    <string name="input_header">New item</string>
+    <string name="title_hint">Title</string>
+    <string name="description_hint">Description</string>
+    <string name="date_hint">Date</string>
+    <string name="archive_menu_item">Archive</string>
+    <string name="archive_title">ARCHIVE</string>
+    <string name="archive_button">Clear archive</string>
+</resources>
